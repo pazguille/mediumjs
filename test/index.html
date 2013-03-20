@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>MediumJS Component</title>
-	</head>
-	<body>
-		<script src="../index.js"></script>
-		<script>
+    <head>
+        <meta charset="utf-8" />
+        <title>MediumJS Component</title>
+    </head>
+    <body>
+        <script src="../build/build.js"></script>
+        <script>
+            var medium = require('medium');
 
-		</script>
-	</body>
+            medium.subscribe('greet', function (arg1, arg2) {
+                alert(arg1);
+                alert(arg2);
+            });
+
+            medium.publish('greet', 'Hi guille!', 'Bye guille!');
+        </script>
+    </body>
 </html>
