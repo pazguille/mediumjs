@@ -1,7 +1,7 @@
 {
-  "name": "mediumjs",
+  "name": "medium",
   "repo": "pazguille/mediumjs",
-  "description": "A small library that implements the Mediator Pattern in JavaScript.\u001b[C",
+  "description": "A small library that implements the Mediator Pattern in JavaScript.",
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {},
