@@ -41,7 +41,7 @@ medium.publish('greet', 'Hi pazguille!', 'Bye pazguille!');
 ## API
 
 ### Medium#subscribe(channel, listener)
-Adds a listener to given `channel`.
+Adds a `listener` to given `channel`.
 - `channel` - The name of the channel you want to subscribe.
 - `listener` - Listener you want to execute to given channel.
 
@@ -50,7 +50,7 @@ medium.subscribe('greet', informal);
 ```
 
 ### Medium#publish(channel, [arg1], [arg2], [...])
-Execute each item in the listener collection in order with given data.
+Execute each item in the `listener` collection in order with given `parameters`.
 - `channel` - The name of the channel you want to subscribe.
 
 ```js
@@ -58,7 +58,7 @@ medium.publish('greet', 'Hi pazguille!', 'Bye pazguille!');
 ```
 
 ### Medium#remove(channel, listener)
-Removes one or all listeners from the collection with given channel.
+Removes one or all `listeners` from the collection with given `channel`.
 - `channel` - The name of the channel you want to remove.
 - `listener` (optional) - Listener you want to remove from given channel.
 
