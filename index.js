@@ -1,9 +1,20 @@
-function Medium () {
+/**
+ * Creates mediator object that handles communication with multiple objects.
+ * @constructor
+ * @property {object} channels
+ * @returns {object}
+ */
+function Medium() {
     this.channels = {};
 
     return this;
 }
 
+/**
+ * Adds a listener to given channel.
+ * @param {string} channel - The name of the channel you want to subscribe.
+ * @param {function} listener - Listener function.
+ */
 Medium.prototype.subscribe = function (channel, listener) {
 
     if (channel === undefined || listener === undefined) {
@@ -16,6 +27,10 @@ Medium.prototype.subscribe = function (channel, listener) {
     return this;
 };
 
+/**
+ * Execute each item in the listener collection in order with given data.
+ * @param {string} channel - The name of the channel you want to subscribe.
+ */
 Medium.prototype.publish = function () {
     var args = Array.prototype.slice.call(arguments, 0), // converted to array
         channel = args.shift(),
@@ -24,7 +39,7 @@ Medium.prototype.publish = function () {
         listeners;
 
     if (channel === undefined) {
-        throw new window.Error('Medium.publish(channel, args): It should receive a channel as paramater.');
+        throw new window.Error('Medium.publish(channel, [arg1], [arg2], [...]): It should receive a channel as paramater.');
     }
 
     listeners = this.channels[channel];
@@ -39,6 +54,11 @@ Medium.prototype.publish = function () {
     return this;
 };
 
+/**
+ * Removes one or all listeners from the collection with given channel.
+ * @param {string} channel - The name of the channel you want to remove.
+ * @param {function} listener - Listener you want to remove from given channel.
+ */
 Medium.prototype.remove = function (channel, listener) {
 
     if (channel === undefined) {
