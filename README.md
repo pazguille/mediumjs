@@ -1,8 +1,8 @@
 # Medium JS
 
-A small library that implements the Mediator Pattern in JavaScript. The essence of the Mediator Pattern is to Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently".
+A small library that implements the Mediator Pattern in JavaScript. The essence of the Mediator pattern is to "Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently". [Read more](http://en.wikipedia.org/wiki/Mediator_pattern)
 
-[Read more](http://en.wikipedia.org/wiki/Mediator_pattern).
+Medium makes use of the Mediator pattern and the difference of the Mediator pattern over the Observer pattern is that a single object is responsible for communication. [Read more](http://stackoverflow.com/questions/9226479/mediator-vs-observer)
 
 ## Installation
 
