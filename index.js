@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates mediator object that handles communication with multiple objects.
  * @constructor
@@ -5,9 +7,8 @@
  * @returns {object}
  */
 function Medium() {
-    this.channels = {};
-
-    return this;
+  this.channels = {};
+  return this;
 }
 
 /**
@@ -17,14 +18,14 @@ function Medium() {
  */
 Medium.prototype.subscribe = function (channel, listener) {
 
-    if (channel === undefined || listener === undefined) {
-        throw new window.Error('Medium.subscribe(channel, listener): It should receive a channel and listener as paramaters.');
-    }
+  if (channel === undefined || listener === undefined) {
+    throw new window.Error('Medium.subscribe(channel, listener): It should receive a channel and listener as paramaters.');
+  }
 
-    this.channels[channel] = this.channels[channel] || [];
-    this.channels[channel].push(listener);
+  this.channels[channel] = this.channels[channel] || [];
+  this.channels[channel].push(listener);
 
-    return this;
+  return this;
 };
 
 /**
@@ -32,26 +33,26 @@ Medium.prototype.subscribe = function (channel, listener) {
  * @param {string} channel - The name of the channel you want to subscribe.
  */
 Medium.prototype.publish = function () {
-    var args = Array.prototype.slice.call(arguments, 0), // converted to array
-        channel = args.shift(),
-        i = 0,
-        len,
-        listeners;
+  var args = Array.prototype.slice.call(arguments, 0), // converted to array
+      channel = args.shift(),
+      i = 0,
+      len,
+      listeners;
 
-    if (channel === undefined) {
-        throw new window.Error('Medium.publish(channel, [arg1], [arg2], [...]): It should receive a channel as paramater.');
+  if (channel === undefined) {
+    throw new window.Error('Medium.publish(channel, [arg1], [arg2], [...]): It should receive a channel as paramater.');
+  }
+
+  listeners = this.channels[channel];
+
+  if (listeners !== undefined) {
+    len = listeners.length;
+    for (i; i < len; i += 1) {
+      listeners[i].apply(this, args);
     }
+  }
 
-    listeners = this.channels[channel];
-
-    if (listeners !== undefined) {
-        len = listeners.length;
-        for (i; i < len; i += 1) {
-            listeners[i].apply(this, args);
-        }
-    }
-
-    return this;
+  return this;
 };
 
 /**
@@ -61,35 +62,30 @@ Medium.prototype.publish = function () {
  */
 Medium.prototype.remove = function (channel, listener) {
 
-    if (channel === undefined) {
-        throw new window.Error('Medium.remove(channel, listener): It should receive a channel as paramater.');
+  if (channel === undefined) {
+    throw new window.Error('Medium.remove(channel, listener): It should receive a channel as paramater.');
+  }
+
+  var len = this.channels[channel].length;
+
+  if (listener !== undefined) {
+    while (len) {
+      if (this.channels[channel][len -= 1] === listener) {
+        this.channels[channel].splice(len, 1);
+        break;
+      }
     }
+  }
 
-    var len = this.channels[channel].length;
+  if (listener === undefined || this.channels[channel].length === 0) {
+    delete this.channels[channel];
+  }
 
-    if (listener !== undefined) {
-        while (len) {
-            if (this.channels[channel][len -= 1] === listener) {
-                this.channels[channel].splice(len, 1);
-                break;
-            }
-        }
-    }
-
-    if (listener === undefined || this.channels[channel].length === 0) {
-        delete this.channels[channel];
-    }
-
-    return this;
+  return this;
 };
 
 
 /**
- * Expose Medium singleton instance
+ * Expose Medium instance
  */
-exports = module.exports = new Medium();
-
-/**
- * Expose Medium class
- */
-exports.Medium = Medium;
+module.exports = new Medium();
