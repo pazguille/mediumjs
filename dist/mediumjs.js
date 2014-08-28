@@ -1,3 +1,10 @@
+/*!
+ * mediumjs - v0.0.1
+ *
+ * Copyright (c) 2014, @pazguille <guille87paz@gmail.com>
+ * Released under the MIT license.
+ */
+(function(window) {
 'use strict';
 
 /**
@@ -88,4 +95,17 @@ Medium.prototype.remove = function (channel, listener) {
 /**
  * Expose Medium instance
  */
-module.exports = new Medium();
+// AMD
+if (typeof window.define === 'function' && window.define.amd !== undefined) {
+  window.define('medium', [], function () {
+    return new Medium();
+  });
+// CommonJS
+} else if (typeof module !== 'undefined' && module.exports !== undefined) {
+  module.exports = new Medium();
+// Browser
+} else {
+  window.medium = new Medium();
+};
+
+}(this));

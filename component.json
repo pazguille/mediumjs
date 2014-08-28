@@ -1,9 +1,9 @@
 {
-  "name": "medium",
+  "name": "mediumjs",
   "repo": "pazguille/mediumjs",
   "description": "A small library that implements the Mediator Pattern in JavaScript.",
   "version": "0.0.1",
-  "author": "Guille Paz <guille87paz@gmail.com>",
+  "author": "@pazguille <guille87paz@gmail.com>",
   "twitter": "@pazguille",
   "keywords": [
     "mediator",

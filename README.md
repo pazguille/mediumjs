@@ -1,4 +1,4 @@
-# Medium JS
+# Medium JS [![Build Status](https://secure.travis-ci.org/pazguille/medium.js.png)](http://travis-ci.org/pazguille/medium.js) [![devDependency Status](https://david-dm.org/pazguille/medium.js/dev-status.png)](https://david-dm.org/pazguille/medium.js#info=devDependencies)
 
 A small library that implements the Mediator Pattern in JavaScript. The essence of the Mediator pattern is to "Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently". [Read more](http://en.wikipedia.org/wiki/Mediator_pattern)
 
@@ -6,15 +6,14 @@ Medium makes use of the Mediator pattern and the difference of the Mediator patt
 
 ## Installation
 
+    $ npm install mediumjs
+
+    $ bower install mediumjs
+
     $ component install pazguille/mediumjs
 
 See: [https://github.com/component/component](https://github.com/component/component)
 
-### Standalone
-Also, you can use the standalone version without components.
-```html
-<script src="../standalone/medium.js"></script>
-```
 
 ## How-to
 
@@ -70,30 +69,13 @@ medium.remove('greet', informal);
 medium.remove('greet');
 ```
 
-## Contact
-- Guillermo Paz (Frontend developer - JavaScript developer | Web standards lover)
+## Maintained by
+- Guille Paz (Front-end developer | Web standards lover)
 - E-mail: [guille87paz@gmail.com](mailto:guille87paz@gmail.com)
 - Twitter: [@pazguille](http://twitter.com/pazguille)
 - Web: [http://pazguille.me](http://pazguille.me)
 
 ## License
-### The MIT License
-Copyright (c) 2013 [@pazguille](http://twitter.com/pazguille)
+Licensed under the MIT license.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Copyright (c) 2013 [@pazguille](http://twitter.com/pazguille).

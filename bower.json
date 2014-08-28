@@ -1,0 +1,35 @@
+{
+  "name": "mediumjs",
+  "repository": "git@github.com:pazguille/mediumjs.git",
+  "description": "A small library that implements the Mediator Pattern in JavaScript.",
+  "author": "@pazguille <guille87paz@gmail.com>",
+  "version": "0.0.1",
+  "ignore": [
+    ".*",
+    "package.json",
+    "component.json",
+    "node_modules",
+    "gulpfile.js",
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": "dist/medium.js",
+  "license": "MIT",
+  "homepage": "https://github.com/pazguille/mediumjs",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "mediator",
+    "channels",
+    "encapsulates",
+    "pattern"
+  ],
+  "authors": [
+    "@pazguille <guille87paz@gmail.com>"
+  ]
+}
