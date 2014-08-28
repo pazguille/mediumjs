@@ -1,4 +1,4 @@
-# Medium JS [![Build Status](https://secure.travis-ci.org/pazguille/medium.js.png)](http://travis-ci.org/pazguille/medium.js) [![devDependency Status](https://david-dm.org/pazguille/medium.js/dev-status.png)](https://david-dm.org/pazguille/medium.js#info=devDependencies)
+# Medium JS [![Build Status](https://secure.travis-ci.org/pazguille/mediumjs.png)](http://travis-ci.org/pazguille/mediumjs) [![devDependency Status](https://david-dm.org/pazguille/mediumjs/dev-status.png)](https://david-dm.org/pazguille/mediumjs#info=devDependencies)
 
 A small library that implements the Mediator Pattern in JavaScript. The essence of the Mediator pattern is to "Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently". [Read more](http://en.wikipedia.org/wiki/Mediator_pattern)
 
