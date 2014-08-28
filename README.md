@@ -19,7 +19,7 @@ See: [https://github.com/component/component](https://github.com/component/compo
 
 First, requires the mediator instance:
 ```js
-var medium = require('medium');
+var medium = require('mediumjs');
 ```
 
 Now, defines a listener and subcribes to a channel:
